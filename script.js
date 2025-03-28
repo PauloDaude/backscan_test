@@ -4,7 +4,7 @@ import { toZonedTime } from "https://esm.sh/date-fns-tz/toZonedTime";
 import { subMinutes } from "https://esm.sh/date-fns/subMinutes";
 import { ptBR } from "https://esm.sh/date-fns/locale";
 
-const NGROK_SERVER_URL = "https://49f8-201-148-182-104.ngrok-free.app"; // Substitua pela URL do servidor ngrok (OBRIGATÓRIO)*
+const NGROK_SERVER_URL = "https://c99d-201-148-182-104.ngrok-free.app"; // Substitua pela URL do servidor ngrok (OBRIGATÓRIO)*
 
 const VALUE = 800; // Substitua pelo valor desejado (opcional)
 const RECIPIENT_NAME = ""; // Insira um nome do destinatário (opcional)
