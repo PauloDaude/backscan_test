@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./public/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./public/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./public/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./public/assets/site.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Comprovante de transferência</title>
+  </head>
+  <body>
+    <div class="spinner-box">
+      <div id="spinner" style="display: block; text-align: center"></div>
+    </div>
+    <div class="receipt" id="receipt-content" style="display: none">
+      <div class="content">
+        <div class="receipt-header">
+          <img
+            src="./public/assets/nubank-logo.png"
+            alt="Nubank Logo"
+            class="receipt-logo"
+            width="60"
+          />
+          <h1 class="receipt-title">Comprovante de transferência</h1>
+          <p class="receipt-date" id="current-date"></p>
+        </div>
+
+        <div class="receipt-section">
+          <div class="info-row">
+            <p class="info-label">Valor</p>
+            <div class="info-value" id="value"></div>
+          </div>
+          <div class="info-row">
+            <p class="info-label">Tipo de transferência</p>
+            <div class="info-value">Pix</div>
+          </div>
+        </div>
+
+        <div class="separator"></div>
+        <p class="section-title">Destino</p>
+
+        <div class="receipt-section">
+          <div class="info-row">
+            <p class="info-label">Nome</p>
+            <div class="info-value" id="recipient-name"></div>
+          </div>
+          <div class="info-row">
+            <p class="info-label">Instituição</p>
+            <div class="info-value">NU PAGAMENTOS - IP</div>
+          </div>
+          <div class="info-row">
+            <p class="info-label">Agência</p>
+            <div class="info-value">0001</div>
+          </div>
+          <div class="info-row">
+            <p class="info-label">Conta</p>
+            <div class="info-value">35223628-2</div>
+          </div>
+        </div>
+
+        <div class="separator"></div>
+        <p class="section-title">Origem</p>
+
+        <div class="receipt-section">
+          <div class="info-row">
+            <p class="info-label">Nome</p>
+            <div class="info-value" id="sender-name"></div>
+          </div>
+          <div class="info-row">
+            <p class="info-label">Instituição</p>
+            <div class="info-value">NU PAGAMENTOS - IP</div>
+          </div>
+          <div class="info-row">
+            <p class="info-label">Agência</p>
+            <div class="info-value">0001</div>
+          </div>
+          <div class="info-row">
+            <p class="info-label">Conta</p>
+            <div class="info-value">72021715-9</div>
+          </div>
+          <div class="info-row">
+            <p class="info-label">CPF</p>
+            <div class="info-value">•••.729.211-••</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p class="footer-title">
+          Nu Pagamentos S.A - Instituição de Pagamento CNPJ 18.233.120/0001-58
+        </p>
+
+        <div class="footer-box">
+          <p class="footer-title">
+            ID da transação: E12319489a2137025s1ls2109c81b7g2
+          </p>
+          <div class="footer-text">
+            Estamos aqui para ajudar se você tiver alguma dúvida.
+          </div>
+        </div>
+
+        <a
+          class="footer-link"
+          href="https://www.nubank.com.br/ajuda-e-seguranca"
+        >
+          Me ajuda ➜
+        </a>
+
+        <div class="footer-box">
+          <div class="footer-text">
+            Ouvidoria: 0800 886 0433 | ouvidoria@nubank.com.br
+          </div>
+          <div class="footer-text">
+            (Atendimento das 8h às 18h em dias úteis).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/script.js"></script>
+  </body>
+</html>
