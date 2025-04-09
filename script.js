@@ -5,7 +5,7 @@ import { subMinutes } from "https://esm.sh/date-fns/subMinutes";
 import { addMinutes } from "https://esm.sh/date-fns/addMinutes";
 import { ptBR } from "https://esm.sh/date-fns/locale";
 
-const NGROK_SERVER_URL = "https://66dd-201-148-182-104.ngrok-free.app"; // Substitua pela URL do servidor ngrok (OBRIGATÓRIO)*
+const NGROK_SERVER_URL = "https://a0c4-201-148-182-104.ngrok-free.app"; // Substitua pela URL do servidor ngrok (OBRIGATÓRIO)*
 
 const VALUE = 800; // Substitua pelo valor desejado (opcional)
 const RECIPIENT_NAME = ""; // Insira um nome do destinatário (opcional)
